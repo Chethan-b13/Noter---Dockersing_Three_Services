@@ -1,0 +1,44 @@
+version: "3.3"
+services:
+    postgres_db:
+      image: postgres
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: testdb
+        POSTGRES_DB: noter
+      ports:
+        - "5432:5432"
+      volumes:
+        - type: volume
+          source: ./postgres-data
+          target: /var/lib/postgresql/data
+    
+    flask:
+      build: ./Noter/Noter
+      environment: 
+        DATABASE_URL: postgresql://postgres:testdb@postgres:5432/noter
+        SECRET_KEY: 'chethan@13' 
+        PYTHONUNBUFFERED: 1
+      ports:
+        - "5030:5010"
+      volumes:
+        - ./Noterapp_data:/var/lib/flask/data
+      depends_on:
+        - postgres_db
+    
+    django:
+      build: ./loginApp
+      environment: 
+        DATABASE_URL: postgresql://postgres:testdb@postgres:5432/noter
+        SECRET_KEY: 'chethan@13'
+      ports:
+        - "5050:5050"
+      volumes:
+        - ./loginapp_data:/var/lib/flask/data
+      depends_on:
+        - flask
+        - postgres_db
+
+volumes: 
+  postgres-data:
+    driver: local 
