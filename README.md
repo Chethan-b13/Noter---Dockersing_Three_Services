@@ -5,11 +5,13 @@ A multi-service application that includes a Django authentication service and a 
 
 ### Prerequisites
 
+
 - Docker
 - Docker Compose
 
 
 ### Getting Started
+
 
 - Clone the repository:
 ```bash
@@ -37,6 +39,7 @@ $ ./Runner.sh
 ***Access the application at http://localhost:5050***
 
 ## Services
+
 
 The application consists of the following services:
 
