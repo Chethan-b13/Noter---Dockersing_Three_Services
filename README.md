@@ -29,6 +29,7 @@ docker-compose up -d
 
 
 - Start the application using Shell Script:
+
 ```bash
 $ ./Runner.sh
 ```
