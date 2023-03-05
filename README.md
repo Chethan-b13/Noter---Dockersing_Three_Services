@@ -14,7 +14,7 @@ A multi-service application that includes a Django authentication service and a 
 
 ### Getting Started
 
--Clone the repository:
+- Clone the repository:
 ```bash
 git clone https://github.com/<your-username>/<your-repo-name>.git
 ```
@@ -57,4 +57,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 [MIT](https://choosealicense.com/licenses/mit/)
-MIT
+
