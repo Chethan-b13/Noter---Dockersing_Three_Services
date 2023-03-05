@@ -13,7 +13,7 @@ A multi-service application that includes a Django authentication service and a 
 
 - Clone the repository:
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/chethancheths/Noter---Dockersing_Three_Services.git
 ```
 - Navigate to the project directory:
 ```bash
@@ -22,8 +22,17 @@ cd <your-repo-name>
 
 - Start the application using Docker Compose:
 ```bash
-docker-compose up
+docker-compose up -d
 ```
+> You need to create database,make migrations , and migrate by going into each container
+#### OR
+
+
+- Start the application using Shell Script:
+```bash
+$ ./Runner.sh
+```
+
 ***Access the application at http://localhost:5050***
 
 ## Services
