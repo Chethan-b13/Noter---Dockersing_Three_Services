@@ -1,6 +1,3 @@
-# Dockersing-Three-Services
-Implementing Dockers on a Django Authentication Service , a flask note taking service and Db Service
-
 # Noter
 
 
